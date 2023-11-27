@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+	setlocale(LC_ALL, "Ukr");
+
+	double initiallength = 1.0; // Початкова довжина
+	double ratio = 0.5; // Знаменник геометричної прогресії
+
+	int day; // m-й день
+	std::cout << "Введіть номер дня (m): ";
+	std::cin >> day;
+
+	double remainingLength = initiallength * std::pow(ratio, day - 1); //Обчислення залишкової довжини на m-й день
+	std::cout << "Залишок макаронини на " << day << "-й день: " << remainingLength << " км" << std::endl;
+
+	return 0;
+}
